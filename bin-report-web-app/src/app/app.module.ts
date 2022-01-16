@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddBinComponent } from './pages/add-bin/add-bin.component';
 import { ReportComponent } from './pages/report/report.component';
 import { ReportMapComponent } from './pages/report-map/report-map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReportMapComponent } from './pages/report-map/report-map.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

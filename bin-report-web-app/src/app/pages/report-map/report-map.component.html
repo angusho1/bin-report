@@ -1,1 +1,16 @@
 <p>report-map works!</p>
+<google-map
+height="500px"
+width="100%"
+[center]="center">
+<map-marker
+*ngFor="let marker of markers"
+[position]="marker.position"
+[label]="marker.label"
+[title]="marker.title"
+[options]="marker.options", 
+
+>
+</map-marker>
+</google-map>
+<button (click)="addMarker()">Add marker</button>
