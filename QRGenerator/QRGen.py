@@ -24,7 +24,7 @@ success = 0
 
 #creates the QR code and uploads it to the DynamoDB storage
 for i in range(numberQR): 
-    binID = 'bin#' + str(uuid4())[-6:] #gives the bin a randomized ID
+    binID = 'bin' + str(uuid4())[-6:] #gives the bin a randomized ID
     qr = qrcode.QRCode(version=1, box_size=10, border=1)
     qr.add_data(website_name + binID) #gives the QR code the value of the website and the bin ID
     qr.make(fit = True)

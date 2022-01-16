@@ -59,9 +59,9 @@ class db(object):
                 'binId': binId,
                 'name' : name,
                 'type': type,
-                'gps': gps,
+                'location': gps,
                 'hits': hits,
-                'date': date,
+                'dateOfInit': date,
             }
         )
         print("The item has been appended with binId: " + id)
