@@ -5,7 +5,7 @@ from db import db
 #creation of the QR Code begins here:
  
 #Base URL
-website_name = 'https://dev.d6o4z1jvmvjti.amplifyapp.com/'
+website_name = 'https://www.reportbin.link/'
 
 #dynamoDB table creation starts here: 
 
