@@ -7,6 +7,7 @@ subscription OnCreateDisposalBin {
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }
@@ -19,6 +20,7 @@ subscription OnUpdateDisposalBin {
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }
@@ -31,6 +33,7 @@ subscription OnDeleteDisposalBin {
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }

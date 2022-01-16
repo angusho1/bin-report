@@ -10,6 +10,7 @@ mutation CreateDisposalBin(
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }
@@ -25,6 +26,7 @@ mutation UpdateDisposalBin(
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }
@@ -40,6 +42,7 @@ mutation DeleteDisposalBin(
     location
     hits
     type
+    dateOfInit
     createdAt
     updatedAt
   }

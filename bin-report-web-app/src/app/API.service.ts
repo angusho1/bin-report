@@ -16,6 +16,7 @@ export type CreateDisposalBinInput = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
 };
 
 export type ModelDisposalBinConditionInput = {
@@ -24,6 +25,7 @@ export type ModelDisposalBinConditionInput = {
   location?: ModelFloatInput | null;
   hits?: ModelIntInput | null;
   type?: ModelStringInput | null;
+  dateOfInit?: ModelStringInput | null;
   and?: Array<ModelDisposalBinConditionInput | null> | null;
   or?: Array<ModelDisposalBinConditionInput | null> | null;
   not?: ModelDisposalBinConditionInput | null;
@@ -100,6 +102,7 @@ export type DisposalBin = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt?: string;
   updatedAt?: string;
 };
@@ -110,6 +113,7 @@ export type UpdateDisposalBinInput = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
 };
 
 export type DeleteDisposalBinInput = {
@@ -159,6 +163,7 @@ export type ModelDisposalBinFilterInput = {
   location?: ModelFloatInput | null;
   hits?: ModelIntInput | null;
   type?: ModelStringInput | null;
+  dateOfInit?: ModelStringInput | null;
   and?: Array<ModelDisposalBinFilterInput | null> | null;
   or?: Array<ModelDisposalBinFilterInput | null> | null;
   not?: ModelDisposalBinFilterInput | null;
@@ -210,6 +215,7 @@ export type CreateDisposalBinMutation = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -222,6 +228,7 @@ export type UpdateDisposalBinMutation = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -234,6 +241,7 @@ export type DeleteDisposalBinMutation = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -276,6 +284,7 @@ export type GetDisposalBinQuery = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -290,6 +299,7 @@ export type ListDisposalBinsQuery = {
     location?: Array<number | null> | null;
     hits?: number | null;
     type?: string | null;
+    dateOfInit?: string | null;
     createdAt: string;
     updatedAt: string;
   } | null> | null;
@@ -328,6 +338,7 @@ export type OnCreateDisposalBinSubscription = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -340,6 +351,7 @@ export type OnUpdateDisposalBinSubscription = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -352,6 +364,7 @@ export type OnDeleteDisposalBinSubscription = {
   location?: Array<number | null> | null;
   hits?: number | null;
   type?: string | null;
+  dateOfInit?: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -403,6 +416,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -431,6 +445,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -459,6 +474,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -562,6 +578,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -590,6 +607,7 @@ export class APIService {
             location
             hits
             type
+            dateOfInit
             createdAt
             updatedAt
           }
@@ -679,6 +697,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -699,6 +718,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
@@ -719,6 +739,7 @@ export class APIService {
           location
           hits
           type
+          dateOfInit
           createdAt
           updatedAt
         }
