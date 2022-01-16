@@ -23,4 +23,7 @@ export class QrUrlComponent implements OnInit {
     }
   }
 
+  report() {
+    this.router.navigate(['report'], { relativeTo: this.route });
+  }
 }

@@ -40,10 +40,10 @@ export class AddBinComponent implements OnInit {
     }`;
 
     const res: any = await API.graphql(graphqlOperation(query, { binId: this.binId }));
-    const id = res.data.listDisposalBins.items.find((bin: any) => bin.binId = this.binId);
+    const bin = res.data.listDisposalBins.items.find((bin: any) => bin.binId === this.binId);
 
     const input = {
-      id,
+      id: bin.id,
       binId: this.binId,
       name: this.binName.value,
       type: this.binType,
