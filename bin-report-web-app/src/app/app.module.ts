@@ -7,18 +7,24 @@ import { AddBinComponent } from './pages/add-bin/add-bin.component';
 import { ReportComponent } from './pages/report/report.component';
 import { ReportMapComponent } from './pages/report-map/report-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { AuthComponent } from './pages/auth/auth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBinComponent,
     ReportComponent,
-    ReportMapComponent
+    ReportMapComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     GoogleMapsModule,
+    NzLayoutModule,
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

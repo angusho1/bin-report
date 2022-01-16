@@ -57,7 +57,7 @@
     "hostedUIDomainName": "bin-report",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\"],\"CallbackURLs\":[\"https://dev.d6o4z1jvmvjti.amplifyapp.com/\"],\"LogoutURLs\":[\"https://dev.d6o4z1jvmvjti.amplifyapp.com/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\"],\"CallbackURLs\":[\"https://dev.dki72i2c6h4an.amplifyapp.com/\",\"http://localhost:4200/\"],\"LogoutURLs\":[\"https://dev.dki72i2c6h4an.amplifyapp.com/\",\"http://localhost:4200/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "parentStack": {
