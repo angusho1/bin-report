@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { Auth } from 'aws-amplify';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -15,11 +15,12 @@ export class AuthGuardService implements CanActivate {
   async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     try {
       const authenticatedUser = await Auth.currentAuthenticatedUser();
-      console.log(authenticatedUser);
       return true;
     } catch (e) {
       console.log(e);
-      this.router.navigate(['login']);
+      if (!route.url.toString().includes('bins')) {
+        this.router.navigate(['login']);
+      }
       return false;
     }
   }

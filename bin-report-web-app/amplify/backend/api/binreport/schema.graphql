@@ -1,4 +1,5 @@
 type DisposalBin @model {
+  id: ID!
   binId: String!
   name: String
   location: [Float]

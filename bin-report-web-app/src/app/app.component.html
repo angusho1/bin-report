@@ -2,11 +2,11 @@
     <nz-header>
       <div class="logo"></div>
       <ul nz-menu nzTheme="dark" nzMode="horizontal">
-        <li nz-menu-item><a routerLink="">Bin Map</a></li>
-        <li nz-menu-item (click)="onClickAuthButton()">{{ authButtonText }}</li>
+        <li nz-menu-item nzMatchRouter><a routerLink="">Bin Map</a></li>
+        <li nz-menu-item nzMatchRouter (click)="onClickAuthButton()">{{ authButtonText }}</li>
       </ul>
     </nz-header>
-    <nz-content>
+    <nz-content style="height: 800px;">
       <router-outlet></router-outlet>
     </nz-content>
   </nz-layout>

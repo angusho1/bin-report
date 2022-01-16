@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddBinComponent } from './pages/add-bin/add-bin.component';
@@ -12,6 +12,13 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { AuthComponent } from './pages/auth/auth.component';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { QrUrlComponent } from './pages/qr-url/qr-url.component';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 @NgModule({
   declarations: [
@@ -19,7 +26,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     AddBinComponent,
     ReportComponent,
     ReportMapComponent,
-    AuthComponent
+    AuthComponent,
+    QrUrlComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,15 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     NzLayoutModule,
     AmplifyUIAngularModule,
     NzBreadCrumbModule,
-    NzMenuModule
+    NzMenuModule,
+    NzFormModule,
+    NzInputModule,
+    NzButtonModule,
+    NzPageHeaderModule,
+    NzSelectModule,
+    NzRadioModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

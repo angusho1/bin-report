@@ -1,1 +1,25 @@
-<p>add-bin works!</p>
+<nz-page-header
+    class="site-page-header"
+    [nzTitle]="formTitle"
+></nz-page-header>
+<form nz-form (ngSubmit)="submitForm()">
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="binName">Bin Name</nz-form-label>
+        <nz-form-control [nzSpan]="6">
+            <input nz-input name="binName" type="text" id="binName" [formControl]="binName">
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-radio-group [(ngModel)]="binType" name="garbage">
+            <label nz-radio nzValue="garbage">Garbage</label>
+            <label nz-radio nzValue="compost">Compost</label>
+            <label nz-radio nzValue="paper">Paper Recycling</label>
+            <label nz-radio nzValue="bottle">Bottle Recycling</label>
+        </nz-radio-group>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 20, offset: 4 }">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+</form>

@@ -108,6 +108,7 @@ export type DisposalBin = {
 };
 
 export type UpdateDisposalBinInput = {
+  id: string;
   binId?: string | null;
   name?: string | null;
   location?: Array<number | null> | null;
@@ -158,6 +159,7 @@ export type DeleteBinRecordInput = {
 };
 
 export type ModelDisposalBinFilterInput = {
+  id?: ModelIDInput | null;
   binId?: ModelStringInput | null;
   name?: ModelStringInput | null;
   location?: ModelFloatInput | null;
@@ -167,22 +169,6 @@ export type ModelDisposalBinFilterInput = {
   and?: Array<ModelDisposalBinFilterInput | null> | null;
   or?: Array<ModelDisposalBinFilterInput | null> | null;
   not?: ModelDisposalBinFilterInput | null;
-};
-
-export type ModelDisposalBinConnection = {
-  __typename: "ModelDisposalBinConnection";
-  items?: Array<DisposalBin | null> | null;
-  nextToken?: string | null;
-};
-
-export type ModelBinRecordFilterInput = {
-  id?: ModelIDInput | null;
-  binId?: ModelStringInput | null;
-  date?: ModelStringInput | null;
-  action?: ModelStringInput | null;
-  and?: Array<ModelBinRecordFilterInput | null> | null;
-  or?: Array<ModelBinRecordFilterInput | null> | null;
-  not?: ModelBinRecordFilterInput | null;
 };
 
 export type ModelIDInput = {
@@ -199,6 +185,22 @@ export type ModelIDInput = {
   attributeExists?: boolean | null;
   attributeType?: ModelAttributeTypes | null;
   size?: ModelSizeInput | null;
+};
+
+export type ModelDisposalBinConnection = {
+  __typename: "ModelDisposalBinConnection";
+  items?: Array<DisposalBin | null> | null;
+  nextToken?: string | null;
+};
+
+export type ModelBinRecordFilterInput = {
+  id?: ModelIDInput | null;
+  binId?: ModelStringInput | null;
+  date?: ModelStringInput | null;
+  action?: ModelStringInput | null;
+  and?: Array<ModelBinRecordFilterInput | null> | null;
+  or?: Array<ModelBinRecordFilterInput | null> | null;
+  not?: ModelBinRecordFilterInput | null;
 };
 
 export type ModelBinRecordConnection = {
