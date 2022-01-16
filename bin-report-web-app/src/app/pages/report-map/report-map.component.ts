@@ -1,4 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { GoogleMap, MapMarker } from '@angular/google-maps';
+import { BinService } from 'src/app/services/bin.service';
 
 
 
@@ -8,6 +10,11 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./report-map.component.scss']
 })
 export class ReportMapComponent implements OnInit {
+    @ViewChild("mapMarker",{static: false}) public mapMarker: any;
+    @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
+    
+    constructor(private binService: BinService){}
+    
     zoom = 12
     center: google.maps.LatLngLiteral
     options: google.maps.MapOptions = {
@@ -19,6 +26,7 @@ export class ReportMapComponent implements OnInit {
       minZoom: 8,
     }
     markers: any = []
+    // marker_info: any = []
 
   
     ngOnInit() {
@@ -27,22 +35,40 @@ export class ReportMapComponent implements OnInit {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         }
+          this.addMarker();
       })
     }
 
     addMarker() {
-        this.markers.push({
-          position: {
-            lat: this.center.lat + ((Math.random() - 0.5) * 2) / 10,
-            lng: this.center.lng + ((Math.random() - 0.5) * 2) / 10,
-          },
-          label: {
-            color: 'red',
-            text: 'Marker label ' + (this.markers.length + 1),
-          },
-          title: 'Marker title ' + (this.markers.length + 1),
-          options: { animation: google.maps.Animation.BOUNCE },
-        })
+        this.binService.addAllMarkers().then(
+            // res => console.log(res[0].hits)
+
+
+            res => this.markers = res.map(
+                (marker:any) => {
+                    return {
+                        position: {
+                            lat: marker.location[0],
+                            lng: marker.location[1]
+                        }, 
+                        label: {
+                            color: 'black',
+                            text: marker.binId
+                        }
+                    }
+                }
+            )
+        )
+    }
+
+    resetCounter() {
+        // this.binService.binHitReset()
+        console.log(this)
+    }
+
+    click() {
+        console.log(this.mapMarker)
+
     }
 
 }
