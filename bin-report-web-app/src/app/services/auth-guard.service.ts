@@ -3,6 +3,7 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } fro
 import { Auth } from 'aws-amplify';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Hub } from 'aws-amplify';
 
 @Injectable({
   providedIn: 'root'

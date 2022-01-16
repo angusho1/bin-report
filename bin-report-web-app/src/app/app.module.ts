@@ -10,6 +10,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { AuthComponent } from './pages/auth/auth.component';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AuthComponent } from './pages/auth/auth.component';
     AppRoutingModule, 
     GoogleMapsModule,
     NzLayoutModule,
-    AmplifyUIAngularModule
+    AmplifyUIAngularModule,
+    NzBreadCrumbModule,
+    NzMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
