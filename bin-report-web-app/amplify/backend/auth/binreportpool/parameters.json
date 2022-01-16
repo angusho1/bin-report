@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "binreport98af1f86_identitypool_98af1f86",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "binrep98af1f86",
-    "userPoolName": "binreport98af1f86_userpool_98af1f86",
+    "identityPoolName": "binreporta57ea6ad_identitypool_a57ea6ad",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "binrepa57ea6ad",
+    "userPoolName": "binreporta57ea6ad_userpool_a57ea6ad",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "binrep98af1f86_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "binrepa57ea6ad_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "98af1f86",
-    "resourceName": "binreport98af1f86",
+    "sharedId": "a57ea6ad",
+    "resourceName": "binreportpool",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -45,8 +45,24 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
+    "usernameAttributes": [
+        "email"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": "{}",
+    "hostedUI": true,
+    "hostedUIDomainName": "bin-report",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\"],\"CallbackURLs\":[\"https://dev.d6o4z1jvmvjti.amplifyapp.com/\"],\"LogoutURLs\":[\"https://dev.d6o4z1jvmvjti.amplifyapp.com/\"]}",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
     "dependsOn": []
 }
