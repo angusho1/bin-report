@@ -10,7 +10,7 @@ website_name = 'https://dev.d6o4z1jvmvjti.amplifyapp.com/'
 #dynamoDB table creation starts here: 
 
 #create a ddb table
-dbObject = db("DisposalBin-sbmn5hhjyfdphcmdbitas2pdqi-dev")
+dbObject = db("DisposalBin-zetfb4bm65ekhk3iuha4doienm-dev")
 
 #checks if table exists or not
 dbObject.checkTable()
