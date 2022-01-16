@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "binreport",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authbinreport98af1f86",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
