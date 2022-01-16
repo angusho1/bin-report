@@ -1,0 +1,85 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateDisposalBin(
+  $input: CreateDisposalBinInput!
+  $condition: ModelDisposalBinConditionInput
+) {
+  createDisposalBin(input: $input, condition: $condition) {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateDisposalBin(
+  $input: UpdateDisposalBinInput!
+  $condition: ModelDisposalBinConditionInput
+) {
+  updateDisposalBin(input: $input, condition: $condition) {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteDisposalBin(
+  $input: DeleteDisposalBinInput!
+  $condition: ModelDisposalBinConditionInput
+) {
+  deleteDisposalBin(input: $input, condition: $condition) {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBinRecord(
+  $input: CreateBinRecordInput!
+  $condition: ModelBinRecordConditionInput
+) {
+  createBinRecord(input: $input, condition: $condition) {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBinRecord(
+  $input: UpdateBinRecordInput!
+  $condition: ModelBinRecordConditionInput
+) {
+  updateBinRecord(input: $input, condition: $condition) {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBinRecord(
+  $input: DeleteBinRecordInput!
+  $condition: ModelBinRecordConditionInput
+) {
+  deleteBinRecord(input: $input, condition: $condition) {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}

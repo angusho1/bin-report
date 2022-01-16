@@ -1,5 +1,14 @@
-type Todo @model {
+type DisposalBin @model {
+  binId: String!
+  name: String
+  location: [Float]
+  hits: Int
+  type: String
+}
+
+type BinRecord @model {
   id: ID!
-  name: String!
-  description: String
+  binId: String!
+  date: AWSDateTime!
+  action: String
 }

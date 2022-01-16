@@ -1,0 +1,59 @@
+# this is an auto generated file. This will be overwritten
+query GetDisposalBin($id: ID!) {
+  getDisposalBin(id: $id) {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+query ListDisposalBins(
+  $filter: ModelDisposalBinFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDisposalBins(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      binId
+      name
+      location
+      hits
+      type
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetBinRecord($id: ID!) {
+  getBinRecord(id: $id) {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
+query ListBinRecords(
+  $filter: ModelBinRecordFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBinRecords(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      binId
+      date
+      action
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}

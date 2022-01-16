@@ -1,0 +1,67 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateDisposalBin {
+  onCreateDisposalBin {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateDisposalBin {
+  onUpdateDisposalBin {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteDisposalBin {
+  onDeleteDisposalBin {
+    id
+    binId
+    name
+    location
+    hits
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBinRecord {
+  onCreateBinRecord {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBinRecord {
+  onUpdateBinRecord {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBinRecord {
+  onDeleteBinRecord {
+    id
+    binId
+    date
+    action
+    createdAt
+    updatedAt
+  }
+}
