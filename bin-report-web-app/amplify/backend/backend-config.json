@@ -1,6 +1,6 @@
 {
   "auth": {
-    "binreport98af1f86": {
+    "binreportpool": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authbinreport98af1f86"
+              "userPoolId": "authbinreportpool"
             }
           },
           "additionalAuthenticationProviders": []

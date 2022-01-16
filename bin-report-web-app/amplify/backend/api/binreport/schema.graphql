@@ -4,6 +4,7 @@ type DisposalBin @model {
   location: [Float]
   hits: Int
   type: String
+  dateOfInit: AWSDateTime
 }
 
 type BinRecord @model {
